@@ -10,24 +10,24 @@ namespace Persistence
     {
         public static async Task SeedData(DataContext dataContext){
 
-            if (dataContext.Todos.Any()) return;
+            if (dataContext.Activities.Any()) return;
 
-            var toDos = new List<ToDo>{
-                new ToDo{
+            var toDos = new List<Activity>{
+                new Activity{
                     Title = "Title 1",
                     Description = "Description 1"
                 },
-                new ToDo{
+                new Activity{
                     Title = "Title 2",
                     Description = "Description 2"
                 },
-                new ToDo{
+                new Activity{
                     Title = "Title 3",
                     Description = "Description 3"
                 }
             };
 
-            await dataContext.Todos.AddRangeAsync(toDos);
+            await dataContext.Activities.AddRangeAsync(toDos);
             await dataContext.SaveChangesAsync(); 
         } 
     }

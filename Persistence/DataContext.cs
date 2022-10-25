@@ -13,6 +13,6 @@ namespace Persistence
         {
         }
 
-        public DbSet<ToDo> Todos { get; set; }
+        public DbSet<Activity> Activities { get; set; }
     }
 }
